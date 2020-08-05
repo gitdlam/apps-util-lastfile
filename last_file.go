@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-
 // WithPrefix returns last file (by name) with the given prefix
 func WithPrefix(dir string, prefix string) (string, error) {
 	files, err := ioutil.ReadDir(dir)
@@ -27,6 +26,10 @@ func WithPrefix(dir string, prefix string) (string, error) {
 			lastFile = f.Name()
 		}
 
+	}
+
+	if lastFile == "" {
+		return "", nil
 	}
 	return dir + "\\" + lastFile, nil
 
