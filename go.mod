@@ -1,3 +1,3 @@
-module github.com/gitdlam/private/util/lastfile
+module github.com/gitdlam/apps-util-lastfile
 
 go 1.14
